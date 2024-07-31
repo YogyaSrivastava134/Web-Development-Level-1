@@ -1,80 +1,61 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f3f3;
 }
 
-header {
-    background: #444;
+.calculator {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.display {
+    background-color: #333;
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
 }
 
-header p {
-    margin: 0.5rem 0 0;
+.btn {
+    background-color: #eee;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-section {
-    padding: 2rem;
-    margin: 1rem 0;
+.btn:hover {
+    background-color: #ddd;
 }
 
-#about img {
-    max-width: 150px;
-    border-radius: 50%;
-    display: block;
-    margin: 1rem auto;
-}
-
-#skills ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#skills li {
-    background: #e2e2e2;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    text-align: center;
-}
-
-#projects .project {
-    background: #fff;
-    margin: 1rem 0;
-    padding: 1rem;
-    border: 1px solid #ddd;
-}
-
-#projects .project img {
-    max-width: 100%;
-    height: auto;
-}
-
-#resume a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #333;
+.btn-equal {
+    grid-column: span 4;
+    background-color: #ff9500;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
 }
 
-#contact p {
-    margin: 0.5rem 0;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+.btn-equal:hover {
+    background-color: #e08900;
 }
